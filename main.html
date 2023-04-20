@@ -13,20 +13,25 @@
 				return -Infinity
 				
 			}
-let max=-infinity,secMax=-infinity; 
-		for(let i=0;i<arr.length;i++){
-			if(arr[i]>=max){
-				if(arr[i]>secMax){
-				secMax=max;
-				}
-				max=arr[i];
-			}
-			else if(arr[i]>secMax){
-				secMax=arr[i];
-			}
-		}
-			if(max==secMax) return -infinity
-		 else return secMax
+let max=-Infinity;
+let secMax=-Infinity; 
+for(let i=0;i<arr.length;i++){
+    if(arr[i]>=max){
+        if(arr[i]>secMax){
+        secMax=max;
+        }
+        max=arr[i];
+    }
+    else if(arr[i]>secMax){
+        secMax=arr[i];
+    }
+}
+    if(max==secMax){
+        return -Infinity;
+    } 
+ else {
+    return secMax;
+ }
 			//Write your code here
 			
 		}
